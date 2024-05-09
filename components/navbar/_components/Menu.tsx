@@ -187,10 +187,25 @@ export const NavigationMenuBar = () => {
 
     const [activeMenu, setActiveMenu] = useState<string  | null>(null);
 
+    const handleMouseEnter = (menu: string) => {
+        setActiveMenu(menu);
+    }
+
+    const renderMenu = (item: MenuItem) => {
+        const {title, menu, options } = item;
+    }
 
     return (
-        <>
+        <div className="
+        flex
+        items-center
+        relative
+
+        "
+         onMouseEnter={() => handleMouseEnter(menu)}
+         onMouseLeave={() => setActiveMenu(null)}
+        >
         Hola
-        </>
+        </div>
     );
 };
