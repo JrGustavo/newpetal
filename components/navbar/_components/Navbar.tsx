@@ -1,5 +1,6 @@
 import {Logo} from "@/components/navbar/_components/Logo";
 import {NavigationMenuBar} from "@/components/navbar/_components/Menu";
+import ActionButtons from "@/components/navbar/_components/ActionButton";
 
 
 export const Navbar = () => {
@@ -28,6 +29,7 @@ export const Navbar = () => {
             </div>
             <div className="flex items-center">
                 <NavigationMenuBar/>
+                <ActionButtons />
 
             </div>
 

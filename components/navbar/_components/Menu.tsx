@@ -1,39 +1,42 @@
-"use client"
+"use client";
 
-import React, {useState} from "react";
+import {ContentMenu} from "@/components/navbar/_components/ContentMenu";
+
+import React, { useState } from "react";
 
 import {
     AlignJustify,
     BarChart,
     Building2,
     Camera,
-    Code, Code2Icon,
+    ChevronDown,
+    Code,
+    Code2Icon,
     DollarSign,
     Download,
     GraduationCap,
     Headphones,
-    Home, Info,
+    Home,
+    Info,
     LibrarySquare,
-    LifeBuoy, Newspaper,
+    LifeBuoy,
+    Lock,
+    Newspaper,
     PaintBucket,
     Settings,
     Smile,
-    Sparkles, UserCircle2,
-    UserPlus
+    Sparkles,
+    UserCircle2,
+    UserPlus,
+} from "lucide-react";
 
-
-} from "lucide-react"
-
-
-interface MenuItem{
-    title: string
-    menu: string
-    options: {label:string, emoji:React.ReactElement, href: string }[]
+interface MenuItem {
+    title: string;
+    menu: string;
+    options: { label: string; emoji: React.ReactElement; href: string }[];
 }
 
-
-
-const items : MenuItem[] = [
+const items: MenuItem[] = [
     {
         title: "Use Cases",
         menu: "use-cases",
@@ -107,7 +110,7 @@ const items : MenuItem[] = [
             },
             {
                 label: "Security",
-                emoji: <Code className="text-rose-500" />,
+                emoji: <Lock className="text-rose-500" />,
                 href: "/",
             },
             {
@@ -179,33 +182,73 @@ const items : MenuItem[] = [
             },
         ],
     },
-
 ];
 
-
-export const NavigationMenuBar = () => {
-
-    const [activeMenu, setActiveMenu] = useState<string  | null>(null);
+export function NavigationMenuBar() {
+    const [activeMenu, setActiveMenu] = useState<string | null>(null);
 
     const handleMouseEnter = (menu: string) => {
         setActiveMenu(menu);
-    }
+    };
+
+    const handleMouseLeave = () => {
+        setActiveMenu(null);
+    };
 
     const renderMenu = (item: MenuItem) => {
-        const {title, menu, options } = item;
-    }
+        const { title, menu, options } = item;
+
+        return (
+            <div
+                className="
+         flex
+         items-center
+         relative
+         "
+                onMouseEnter={() => handleMouseEnter(menu)}
+                onMouseLeave={handleMouseLeave}
+            >
+                <div className="flex items-center">
+                    <div className="w-24">{title}</div>
+                    <div>
+                        <ChevronDown className="relative top-[1px] h-3 w-3" />
+                    </div>
+                    <div className="mt-20">
+                        {activeMenu === menu && (
+                            <ContentMenu
+                                options={options.map((option, index) => ({
+                                    ...option,
+                                    href: option.href,
+                                }))}
+                            />
+                        )}
+                    </div>
+                </div>
+            </div>
+        );
+    };
 
     return (
-        <div className="
-        flex
+        <div
+            className="
+        hidden
+        text-md
+        font-light
+        space-x-4
+        w-full
         items-center
-        relative
+        xl:flex
+        h-24
 
         "
-         onMouseEnter={() => handleMouseEnter(menu)}
-         onMouseLeave={() => setActiveMenu(null)}
         >
-        Hola
+            {items.map((item, index) => (
+                <React.Fragment key={index}>
+                    <div className="cursor-pointer hidden xl:block">
+                        {renderMenu(item)}
+                    </div>
+                </React.Fragment>
+            ))}
         </div>
     );
-};
+}
