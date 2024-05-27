@@ -43,7 +43,7 @@ const ActionButtons = () => {
 
             "
                 >
-                    <div className="font-light flex">Pricing</div>
+                    <div className="font-light flex">Recursos</div>
                 </Link>
 
                 <Link
@@ -55,7 +55,7 @@ const ActionButtons = () => {
 
             "
                 >
-                    <div className="font-light flex xl:w-12">Sign In</div>
+                    <div className="font-light flex xl:w-12">Tarifas</div>
                 </Link>
 
 
@@ -72,39 +72,38 @@ const ActionButtons = () => {
                 font-light
                 rounded-[40px]
                 border-4
-                border-indigo-400/90
+                border-[#0070F3]
                 py-6
-                bg-[#565add]
+                bg-[#0070F3]
                 hover:scale-110
                 transition-all
                 duration-300
                 shadow-md
-                hover:shadow-indigo-300
+                hover:shadow-[#0070F3]
 
                 ">
-                        Get Bird for Free
+                        Contactar con ventas
                     </Button>
                 </Link>
                 <Link href={"/contact"}>
                     <Button
                         className="
               hidden
-              text-[#565add]
+              text-[#F9F8F5]
               text-md
               font-light
-              bg-[#eff0ff]
+              bg-[#0B051D]
               p-6
-                rounded-[40px]
-                hover:scale-110
-                transition-all
-                duration-300
-                shadow-md
-                md:hidden
-                lg:flex
-                hover:shadow-indigo-300
-
+               rounded-[40px]
+               hover:scale-110
+               transition-all
+               duration-300
+               shadow-md
+               md:hidden
+               lg:flex
+               hover:shadow-[#0070F3]
                 ">
-                        Contact Sales
+                        Iniciar sesión
                     </Button>
                 </Link>
 

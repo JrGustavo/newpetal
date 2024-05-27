@@ -38,8 +38,8 @@ interface MenuItem {
 
 const items: MenuItem[] = [
     {
-        title: "Use Cases",
-        menu: "use-cases",
+        title: "Productos",
+        menu: "Productos",
         options: [
             {
                 label: "Team Alignment",
@@ -85,8 +85,8 @@ const items: MenuItem[] = [
     },
 
     {
-        title: "For Business",
-        menu: "for-business",
+        title: "Soluciones",
+        menu: "Soluciones",
         options: [
             {
                 label: "Bird AI",
@@ -126,8 +126,8 @@ const items: MenuItem[] = [
         ],
     },
     {
-        title: "Resources",
-        menu: "resources",
+        title: "Developers",
+        menu: "Developers",
         options: [
             {
                 label: "Blog",
@@ -161,27 +161,7 @@ const items: MenuItem[] = [
             },
         ],
     },
-    {
-        title: "Company",
-        menu: "company",
-        options: [
-            {
-                label: "About Us",
-                emoji: <Info className="text-red-500" />,
-                href: "/about-us",
-            },
-            {
-                label: "Careers",
-                emoji: <UserCircle2 className="text-green-500" />,
-                href: "/careers",
-            },
-            {
-                label: "Newsroom",
-                emoji: <Newspaper className="text-blue-500" />,
-                href: "/newsroom",
-            },
-        ],
-    },
+
 ];
 
 export function NavigationMenuBar() {

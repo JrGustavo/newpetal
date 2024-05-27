@@ -451,7 +451,7 @@ const DropdownMenu : React.FC<DropDownMenuProps> = ({onClose}) => {
             border-b
             "
                 >
-                    Pricing
+                    Recursos
                     <div>
                         <ArrowRight className='h-6 w-6 ' />
                     </div>
@@ -473,7 +473,7 @@ const DropdownMenu : React.FC<DropDownMenuProps> = ({onClose}) => {
 
             "
                 >
-                    Contact Sales
+                    Tarifas
                     <div>
                         <ArrowRight className='h-6 w-6 ' />
                     </div>
@@ -502,7 +502,7 @@ const DropdownMenu : React.FC<DropDownMenuProps> = ({onClose}) => {
                         shadow-md
                         hover:shadow-indigo-300
                         ">
-                            Sign in to Bird
+                            Contactar con ventas
                         </Button>
                     </Link>
 
@@ -523,7 +523,7 @@ const DropdownMenu : React.FC<DropDownMenuProps> = ({onClose}) => {
                         hover:shadow-indigo-300
 
                         ">
-                            Try Bird for Free
+                            Iniciar sesión
                         </Button>
                     </Link>
 
